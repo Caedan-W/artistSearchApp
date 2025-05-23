@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!-- ① 正常 App 主题（MaterialComponents 日夜间，无 ActionBar） -->
+<style name="Theme.ArtsyFrontend"
+    parent="Theme.Material3.DayNight.NoActionBar">
+    <!-- 你的 colorPrimary、typography 等定制 -->
+</style>
+
+<!-- ② Splash Screen 专用主题 -->
+<style name="Theme.ArtsyFrontend.Splash"
+    parent="Theme.SplashScreen">
+    <!-- 启动页背景色 -->
+    <item name="windowSplashScreenBackground">@color/white</item>
+    <!-- 启动页中间动图 -->
+    <item name="windowSplashScreenAnimatedIcon">
+        @drawable/ic_launcher_foreground
+    </item>
+    <!-- 动画结束后切回正式主题 -->
+    <item name="postSplashScreenTheme">
+        @style/Theme.ArtsyFrontend
+    </item>
+</style>
+
+</resources>
